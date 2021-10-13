@@ -8,10 +8,13 @@ public class Calculator {
         int operand1;
         int operand2;
         String sign;
-
+        System.out.print("Введіть число1: ");
         operand1 = scan.nextInt();
+        System.out.print("Введіть число2: ");
         operand2 = scan.nextInt();
+        System.out.print("Введіть дію: ");
         sign = scan.next();
+        System.out.print("РЕЗУЛЬТАТ: ");
 
         switch (sign) {
             case "+":
