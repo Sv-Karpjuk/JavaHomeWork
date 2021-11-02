@@ -8,9 +8,9 @@ public class Library {
         book[0] = new Book("Глобус України", "Весельчак У.",1977);
         book[1] = new Book("Життя на Марсі", "Петерсон & Іванісов",2021);
         book[2] = new Book("Китайська філософія", "Пи Як", 1699);
-        book[3] = new Book("Війна та мир", "Толстой В.", 1856);
-        book[4] = new Book("Журнал Наука и жизнь, вип. 7", "вид.Космос", 1988);
-        book[5] = new Book("Журнал Крестьянка вип. 7", "вид.Космос", 1974);
+        book[3] = new Book("Війна та мир", "Толстой Л.", 1873);
+        book[4] = new Book("Журнал Наука и жизнь, №7", "вид.Космос", 1988);
+        book[5] = new Book("Журнал Крестьянка №11", "вид.Космос", 1974);
         book[6] = new Book("Психологія", "Мартинов В.А.", 1999);
 
         Reader[] reader = new Reader[4];
@@ -44,19 +44,20 @@ public class Library {
         System.out.println("");
         System.out.println("ВЗЯЛИ:");
 
-        reader[0].takeBook(2);
-        reader[1].takeBook("Енциклопедія","Література","Війна і мир");
-        reader[2].takeBook(book[3],book[1],book[4],book[6]);
+        reader[0].takeBook(3);
+        reader[1].takeBook("Глобус України","Психологія","Війна та мир");
+        reader[3].takeBook(book[4].getBookName(),book[5].getBookName());
+        reader[2].takeBook(book[3],book[1],book[6]);
 
         System.out.println("");
         System.out.println("ПОВЕРНУЛИ:");
 
-        reader[2].returnBook(1);
+        reader[2].returnBook(2);
         reader[3].returnBook("Астрономія","Фізика","Математика");
         reader[1].returnBook(book[0],book[2],book[6]);
 
         System.out.println("");
-        System.out.println("Залишок книг:" + Book.getBookCount());
+        System.out.println("Залишок книг: " + Book.getBookCount());
 
     }
 }
