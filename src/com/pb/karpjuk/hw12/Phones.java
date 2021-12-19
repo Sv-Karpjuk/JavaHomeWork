@@ -1,10 +1,9 @@
-package com.pb.karpjuk.hw11;
+package com.pb.karpjuk.hw12;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Phone {
+public class Phones {
 
     private String clientFIO;
     private String birthDate;
@@ -12,12 +11,12 @@ public class Phone {
     private String address;
     private String dtEdit;
 
-    public Phone() {
+    public Phones() {
 
         this.dtEdit = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
 
-    public Phone(String clientFIO, String birthDate, String address, String phoneNum) {
+    public Phones(String clientFIO, String birthDate, String address, String phoneNum) {
 
         this.clientFIO = clientFIO;
         this.birthDate = birthDate;
@@ -26,7 +25,7 @@ public class Phone {
         this.dtEdit = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
 
-    public Phone(String clientFIO, String birthDate, String address, String phoneNum, LocalDateTime dtEdit) {
+    public Phones(String clientFIO, String birthDate, String address, String phoneNum, LocalDateTime dtEdit) {
 
         this.clientFIO = clientFIO;
         this.birthDate = birthDate;
@@ -103,3 +102,4 @@ public class Phone {
     }
 
 }
+

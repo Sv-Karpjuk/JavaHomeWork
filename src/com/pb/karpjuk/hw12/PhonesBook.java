@@ -1,18 +1,25 @@
-package com.pb.karpjuk.hw11;
+package com.pb.karpjuk.hw12;
 
 import java.util.ArrayList;
-import java.time.LocalDate;
-import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class PhoneBook extends ArrayList<Phone> {
+public class PhonesBook extends ArrayList<Phones> {
 
-    public PhoneBook(){}
+    private ArrayList<Phones> phones;
+    private ArrayList<PhonesBook> phonesBook;
+
+    public ArrayList<PhonesBook> getBooks() {
+        return phonesBook;
+    }
+
+    public PhonesBook(){}
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (Phone phone : this) {
+        for (Phones phone : this) {
             stringBuilder.append("----------------------------\n");
             stringBuilder.append("ClientFIO: " + phone.getClientFIO() + "\n");
             stringBuilder.append("PhoneNum: " + phone.getPhoneNum() + "\n");
@@ -23,6 +30,7 @@ public class PhoneBook extends ArrayList<Phone> {
 
         return stringBuilder.toString();
     }
+
 }
 /*
     Создать в пакете hw11 консольное приложение "Телефонная книга".

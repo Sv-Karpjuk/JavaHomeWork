@@ -1,4 +1,4 @@
-package com.pb.karpjuk.hw11;
+package com.pb.karpjuk.hw12;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -7,11 +7,11 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-public class LocalDtTmDeserializer extends StdDeserializer<LocalDateTime> {
+public class LocalDtTmDeserializers extends StdDeserializer<LocalDateTime> {
 
     private static final long serialVersionUID = 1L;
 
-    public LocalDtTmDeserializer() {
+    public LocalDtTmDeserializers() {
         super(LocalDateTime.class);
     }
 
