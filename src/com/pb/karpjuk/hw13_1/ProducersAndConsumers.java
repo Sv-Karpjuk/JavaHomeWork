@@ -1,24 +1,24 @@
-package com.pb.karpjuk.hw13;
+package com.pb.karpjuk.hw13_1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProducerAndConsumer {
+public class ProducersAndConsumers {
 
     public static void main(String[] args) {
 
         List<Integer> buffer = new ArrayList<>();
 
-        Producer producer = new Producer(buffer);
-        Consumer consumer = new Consumer(buffer);
+        Producers producers = new Producers(buffer);
+        Consumers consumers = new Consumers(buffer);
 
-        Thread threadConsumer = new Thread(producer);
-        Thread threadProducer = new Thread(consumer);
+        Thread threadConsumers = new Thread(producers);
+        Thread threadProducers = new Thread(consumers);
 
         System.out.println("Початок роботи...");
 
-        threadProducer.start();
-        threadConsumer.start();
+        threadProducers.start();
+        threadConsumers.start();
 
     }
 }
@@ -33,3 +33,4 @@ public class ProducerAndConsumer {
 Если буфер заполнен полностью, производитель должен ждать, пока потребитель заберёт данные и место освободится.
 В качестве буфера можно выбрать, например Queue или List, но реализация не должна быть потокобезопасная (например LinkedList).
  */
+

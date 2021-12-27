@@ -17,7 +17,7 @@ class Store{
     public synchronized void get() {
         while (product<1) {
             try {
-                wait();
+                wait(1);
             }
             catch (InterruptedException e) {
             }
@@ -30,7 +30,7 @@ class Store{
     public synchronized void put() {
         while (product>=3) {
             try {
-                wait();
+                wait(1);
             }
             catch (InterruptedException e) {
             }
@@ -49,7 +49,7 @@ class Producer implements Runnable{
         this.store=store;
     }
     public void run(){
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i < 555; i++) {
             store.put();
         }
     }
@@ -62,7 +62,7 @@ class Consumer implements Runnable{
         this.store=store;
     }
     public void run(){
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i < 555; i++) {
             store.get();
         }
     }
