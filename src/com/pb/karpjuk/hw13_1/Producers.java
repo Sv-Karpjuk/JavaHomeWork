@@ -12,6 +12,7 @@ public class Producers implements Runnable{
         int rnd = 0;
 
         while (buffer.size() >= 5) {
+
             try {
                 System.out.println("Буфер повний! чекаю поки споживач використає ресурси!");
                 wait(1);
