@@ -20,7 +20,7 @@ public class Main {
         frame.add(textField);
 
         frame.setSize(400,300);
-        frame.setTitle("Employee info");
+        frame.setTitle("Employee info:");
 
         // нужно убрать менеджер компоновки который установлен по умолчанию
         // иначе будет использован BorderLayout и компоненты будут расположены не так как задумано
